@@ -51,14 +51,14 @@ class NewsDetail(DetailView):
 
 
 class NewsCreate(PermissionRequiredMixin, CreateView):
-    permission_required = ('newsapp.add_Post')
+    permission_required = ('newsapp.add_post')
     form_class = PostForm
     model = Post
     template_name = 'createnews.html'
 
 
 class NewsUpdate(PermissionRequiredMixin, UpdateView):
-    permission_required = ('newsapp.change_Post')
+    permission_required = ('newsapp.change_post')
     form_class = PostForm
     model = Post
     template_name = 'createnews.html'
@@ -112,7 +112,7 @@ class ArticlesSearch(ListView):
 
 
 class ArticlesCreate(PermissionRequiredMixin, CreateView):
-    permission_required = ('newsapp.add_Post')
+    permission_required = ('newsapp.add_post')
     form_class = PostForm
     model = Post
     template_name = 'createarticles.html'
@@ -124,7 +124,7 @@ class ArticlesCreate(PermissionRequiredMixin, CreateView):
 
 
 class ArticlesUpdate(PermissionRequiredMixin, UpdateView):
-    permission_required = ('newsapp.change_Post')
+    permission_required = ('newsapp.change_post')
     form_class = PostForm
     model = Post
     template_name = 'createarticles.html'
